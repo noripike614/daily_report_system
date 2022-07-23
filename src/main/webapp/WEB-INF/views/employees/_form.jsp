@@ -6,21 +6,21 @@
 <c:set var="action" value="${ForwardConst.ACT_EMP.getValue()}" />
 <c:set var="commIdx" value="${ForwardConst.CMD_INDEX.getValue()}" />
 
-<c:if test="${errors != null }">
-	<div id="flush_error">
-	入力内容にエラーがあります。<br />
-	<c:forEach var="error" items="${errors}">
-	  ・<c:out value="${errors}"/><br />
-	</c:forEach>
-	</div>
-</c:if>
+<c:if test="${errors != null}">
+    <div id="flush_error">
+        入力内容にエラーがあります。<br />
+        <c:forEach var="error" items="${errors}">
+            ・<c:out value="${error}" /><br />
+        </c:forEach>
 
+    </div>
+</c:if>
 <label for="${AttributeConst.EMP_CODE.getValue()}">社員番号</label><br />
 <input type="text" name="${AttributeConst.EMP_CODE.getValue()}" id="${AttributeConst.EMP_CODE.getValue()}" value="${employee.code}" />
 <br /><br />
 
-<label for="${AttributeConst. EMP_NAME.getValue()}">氏名</label><br />
-<input type="text" name="${AttributeConst. EMP_NAME.getValue()}" id="${AttributeConst. EMP_NAME.getValue()}" value="${employee.name}" />
+<label for="${AttributeConst.EMP_NAME.getValue()}">氏名</label><br />
+<input type="text" name="${AttributeConst.EMP_NAME.getValue()}" id="${AttributeConst.EMP_NAME.getValue()}" value="${employee.name}" />
 <br /><br />
 
 <label for="${AttributeConst.EMP_PASS.getValue()}">パスワード</label><br />
